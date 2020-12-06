@@ -17,12 +17,9 @@ const themeSwitcher = document.querySelector('#theme-switch-toggle');
 const body = document.querySelector('body');
 
 const setInitialTheme = () => {
-  if (localStorage.getItem('theme') === Theme.LIGHT) {
-    themeSwitcher.checked = false;
-    body.classList.add('light-theme');
-  } else {
+  if (localStorage.getItem('theme') === Theme.DARK) {
     themeSwitcher.checked = true;
-    body.classList.add('dark-theme');
+    body.classList.add(Theme.DARK);
   }
 };
 
